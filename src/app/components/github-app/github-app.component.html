@@ -1,0 +1,74 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <form (submit)="searchUser()">
+        <div class="form-group">
+          <input [(ngModel)]="githubQueryUser" class="css-input" type="search" name="user" id="user"
+            placeholder="Usuário GitHub">
+        </div>
+        <div class="form-btn">
+          <input class="btn-submit" type="submit" value="Pesquisar">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <app-github-profile-repos [githubRepos]="githubRepos"></app-github-profile-repos>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    margin-top: 30px;
+    border: 1px solid #f1f1f1;
+    max-width: 1200px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .btn-submit {
+    background-color: #000;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    border-style: solid;
+    border-radius: 50px;
+  }
+
+  .css-input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-width: 0px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 50px;
+    box-shadow: -1px 0px 13px rgba(66, 66, 66, .17);
+  }
+
+  .css-input:focus {
+    outline: none;
+  }
+
+  .mt-3 {
+    margin-top: 30px;
+  }
+</style>

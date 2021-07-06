@@ -1,0 +1,26 @@
+<h5 class="center">Dados do Usuário</h5>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Login</th>
+      <th scope="col">Url Perfil</th>
+      <th scope="col">Data de Cadastro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{githubProfile.id}}</th>
+      <td>{{githubProfile.login}}</td>
+      <td><a [href]="githubProfile.html_url">Perfil</a></td>
+      <td>{{githubProfile.created_at | date}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  .center{
+    text-align: center;
+  }
+</style>
